@@ -18,10 +18,15 @@ function registerActions () {
   RequireUtils
     .readAvailableActions()
     .forEach(action/*: Action*/ => {
-      program
-        .command(ActionUtils.buildCommand(action.name, action.props))
-        .description(action.description)
-        .action(params => action.run(params).catch(console.error));
+      var command = program
+                      .command(ActionUtils.buildCommand(action.name, action.props))
+                      .description(action.description)
+      
+      action.options.forEach(option => {
+        command.option(option.syntax, option.description)
+      });
+      
+      command.action(params => action.run(params).catch(console.error));
     });
 }
 

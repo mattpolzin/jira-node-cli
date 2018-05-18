@@ -12,10 +12,10 @@
   "dependencies": {
     "axios": "^0.17.1",
     "clipboardy": "^1.2.2",
-    "colors": "^1.1.2",
-    "commander": "^2.13.0",
-    "inquirer": "^5.1.0",
-    "moment": "^2.20.1"
+    "colors": "^1.2.5",
+    "commander": "^2.15.1",
+    "inquirer": "^5.2.0",
+    "moment": "^2.22.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
